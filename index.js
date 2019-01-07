@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-require('../routes/recipes.js')(app);
+require('./routes/recipes.js')(app);
 app.get('/', function(request, response) {
   response.json('slash route works');
 });
